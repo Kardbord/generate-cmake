@@ -1,5 +1,16 @@
 #!/bin/bash
 
+if [[ $# -eq 1 && ($1 == "-h" || $1 == "--help") ]]; then
+    echo -e "
+    This script generates a CMakeLists.txt file.\n
+    If no arguments are provided, generates a CMakeLists.txt 
+    with project name 'myProject' and 2.4 as min cmake version.\n
+    Optional Arguments:
+    \$1 : name of the project to be associated with CMakeLists.txt
+    \$2 : minimum cmake version required\n"
+    exit 0
+fi
+
 touch CMakeLists.txt
 
 if [ $# -eq 1 ]; then
