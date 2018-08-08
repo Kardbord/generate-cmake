@@ -14,26 +14,26 @@ fi
 touch CMakeLists.txt
 
 if [ $# -eq 1 ]; then {
-    echo "cmake_minimum_required(VERSION 2.4)";
-    echo "project($1)";
-    echo -e "\n";
-    echo "set(CMAKE_CXX_STANDARD 11)";
-    echo -e "\n";
-    echo "set(SOURCE_FILES main.cpp)";
-    echo -e "add_executable($1 \${SOURCE_FILES})"
-    }  >> CMakeLists.txt
+        echo "cmake_minimum_required(VERSION 2.4)";
+        echo "project($1)";
+        echo -e "\n";
+        echo "set(CMAKE_CXX_STANDARD 11)";
+        echo -e "\n";
+        echo "set(SOURCE_FILES main.cpp)";
+        echo -e "add_executable($1 \${SOURCE_FILES})"
+    }  > CMakeLists.txt
     exit 0
 fi
 
 if (( $# > 1 )); then {
-    echo "cmake_minimum_required(VERSION $2)";
-    echo "project($1)";
-    echo -e "\n";
-    echo "set(CMAKE_CXX_STANDARD 11)";
-    echo -e "\n";
-    echo "set(SOURCE_FILES main.cpp)";
-    echo -e "add_executable($1 \${SOURCE_FILES})"
-    }  >> CMakeLists.txt
+        echo "cmake_minimum_required(VERSION $2)";
+        echo "project($1)";
+        echo -e "\n";
+        echo "set(CMAKE_CXX_STANDARD 11)";
+        echo -e "\n";
+        echo "set(SOURCE_FILES main.cpp)";
+        echo -e "add_executable($1 \${SOURCE_FILES})"
+    }  > CMakeLists.txt
     exit 0
 fi
 
@@ -45,5 +45,5 @@ fi
     echo -e "\n";
     echo "set(SOURCE_FILES main.cpp)";
     echo -e "add_executable(myProject \${SOURCE_FILES})"
-} >> CMakeLists.txt
+} > CMakeLists.txt
 exit 0
