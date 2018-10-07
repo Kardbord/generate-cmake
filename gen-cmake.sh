@@ -3,7 +3,7 @@
 if [[ $# -eq 1 && ($1 == "-h" || $1 == "--help") ]]; then
     echo -e "
     This script generates a CMakeLists.txt file.
-    If the a CMakeLists.txt file already exists, it will be overwritten.\n
+    If a CMakeLists.txt file already exists, it will be overwritten.\n
     If no arguments are provided, a CMakeLists.txt is generated
     with project name 'myProject' and 2.4 as min cmake version.\n
     Optional Arguments:
