@@ -14,7 +14,7 @@ fi
 
 touch CMakeLists.txt
 
-if [ $# -eq 2 ]; then {
+if [ $# -eq 1 ]; then {
         echo "cmake_minimum_required(VERSION 2.4)";
         echo "project($1)";
         echo -e "\n";
@@ -26,7 +26,7 @@ if [ $# -eq 2 ]; then {
     exit 0
 fi
 
-if (( $# > 2 )); then {
+if (( $# > 1 )); then {
         echo "cmake_minimum_required(VERSION $2)";
         echo "project($1)";
         echo -e "\n";
